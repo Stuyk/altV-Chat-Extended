@@ -17,12 +17,17 @@ You can start by adding the chat resource in its own folder called 'chat'.
 * Automatically Clear Chat Box on Close
 * Chat Padding Removed for Double the Messages Viewable
 * Chat Visibility Fix
+* Debug Chat Formatting
 
 **Chat Range**
 
 ![](https://i.imgur.com/uu74ct0.png)
 
 ![](https://i.imgur.com/SKwdYfu.png)
+
+
+**Debug Formatting**
+![](https://i.imgur.com/BOMn4eH.png)
 
 
 **Installation:**
@@ -81,26 +86,33 @@ alt.on('playerConnect', (player) => {
 chat.registerCmd('pos', (player, args) => {
     // Send a message to a player.
     chat.send(player, `X: ${player.pos.x}, Y: ${player.pos.y}, Z: ${player.pos.z}`);
-    
+
     // Send a message to a player directly.
     player.sendMessage(`X: ${player.pos.x}, Y: ${player.pos.y}, Z: ${player.pos.z}`);
-    
+
     // Mute a player.
     player.mute(true);
 
     // Unmute a player.
     player.mute(false);
-    
+
     // Sends to all players.
     chat.broadcast(`${player.name} is located at: ${player.pos.x}, Y: ${player.pos.y}, Z: ${player.pos.z}`);
 });
 
 chat.mute(player);
-chat.unmute(player)
+chat.unmute(player);
 
 alt.on('chatIntercept', (player, msg) => {
     // Do whatever you need to do.
 });
+
+// Debug formatting.
+chat.success(`Something succeeded!`);
+chat.info(`INFORMATION!`);
+chat.warning(`Don't do it, man!`);
+chat.error(`Now you screwed it up! Good Job!`);
+chat.debug(`secret INFORMATION!`);
 ```
 
 **Clientside**
