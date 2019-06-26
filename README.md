@@ -18,7 +18,6 @@ You can start by adding the chat resource in its own folder called 'chat'.
 
 ![](https://i.imgur.com/uu74ct0.png)
 
-**If you plan on using chat ranges please consider that [this is 100 range for two players](https://i.imgur.com/agmEMtY.jpg)**
 
 **Installation:**
 
@@ -53,7 +52,7 @@ deps: [
 Inside chat/index.mjs:
 ```
 let rangedChat = false; // Used for ranged chat.
-let rangeOfChat = 1200; // Used for ranged chat.
+let rangeOfChat = 25; // Used for ranged chat.
 let cancelAllChat = false; // Used to intercept messages.
 ```
 

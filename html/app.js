@@ -102,8 +102,6 @@ window.addEventListener('load', function(){
 	messagesBlock = document.querySelector('.messages');
 	msgInputBlock = document.querySelector('.msginput');
 	msgInputLine = document.querySelector('.msginput input');
-
-  addString('<b>alt:V Multiplayer has started</b>');
 	alt.emit('chatloaded');
 });
 

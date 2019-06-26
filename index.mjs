@@ -2,8 +2,8 @@ import alt from 'alt';
 
 let cmdHandlers = {};
 let mutedPlayers = new Map();
-let rangedChat = false;
-let rangeOfChat = 1200;
+let rangedChat = true;
+let rangeOfChat = 25;
 let cancelAllChat = false;
 
 function invokeCmd(player, cmd, args) {
@@ -71,7 +71,7 @@ alt.onClient('chatmessage', (player, msg) => {
 
 // Get the distance between two vectors.
 function Distance(vector1, vector2) {
-  return Math.pow(vector1.x - vector2.x, 2) + Math.pow(vector1.y - vector2.y, 2) + Math.pow(vector1.z - vector2.z, 2);
+  return Math.sqrt(Math.pow(vector1.x - vector2.x, 2) + Math.pow(vector1.y - vector2.y, 2) + Math.pow(vector1.z - vector2.z, 2));
 }
 
 export function send(player, msg) {
