@@ -66,18 +66,21 @@ alt.on('keyup', (key) => {
     opened = true;
     view.emit('openChat', false);
     alt.emit('chatOpened');
+    alt.showCursor(true);
     alt.toggleGameControls(false);
   }
   else if (!opened && key === 0xBF && alt.gameControlsEnabled()) {
     opened = true;
     view.emit('openChat', true);
     alt.emit('chatOpened');
+    alt.showCursor(true);
     alt.toggleGameControls(false);
   }
   else if (opened && key == 0x1B) {
     opened = false;
     view.emit('closeChat');
     alt.emit('chatClosed');
+    alt.showCursor(false);
     alt.toggleGameControls(true);
   }
 
