@@ -1,5 +1,7 @@
 # extended:Chat for alt:V
 
+Remember to 🌟 this Github if you 💖 it.
+
 You can start by adding the chat resource in its own folder called 'chat'.
 
 **Features:**
