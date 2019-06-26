@@ -27,6 +27,7 @@ You can start by adding the chat resource in its own folder called 'chat'.
 
 
 **Debug Formatting**
+
 ![](https://i.imgur.com/BOMn4eH.png)
 
 
