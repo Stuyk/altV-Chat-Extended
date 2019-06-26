@@ -15,6 +15,8 @@ You can start by adding the chat resource in its own folder called 'chat'.
 * Chat Open / Close Events for Clientside
 * Chat Message Event for Clientside
 * Automatically Clear Chat Box on Close
+* Chat Padding Removed for Double the Messages Viewable
+* Chat Visibility Fix
 
 **Chat Range**
 
