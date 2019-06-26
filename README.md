@@ -22,6 +22,8 @@ You can start by adding the chat resource in its own folder called 'chat'.
 
 ![](https://i.imgur.com/uu74ct0.png)
 
+![](https://i.imgur.com/SKwdYfu.png)
+
 
 **Installation:**
 
