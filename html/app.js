@@ -202,6 +202,7 @@ document.querySelector('#message').addEventListener('submit', function(e) {
 	closeChat();
 });
 
+
 document.querySelector('.msginput input').addEventListener('keydown', function(e) {
   if (e.keyCode === 9) {
     e.preventDefault();
