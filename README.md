@@ -1,7 +1,8 @@
 # extended:Chat for alt:V
 
 You can start by adding the chat resource in its own folder called 'chat'.
-Features:
+
+**Features:**
 
 * Register Commands
 * Send Chat Messages
@@ -19,6 +20,8 @@ Features:
 
 **If you plan on using chat ranges please consider that [this is 100 range for two players](https://i.imgur.com/agmEMtY.jpg)**
 
+**Installation:**
+
 ```
 altVServerFolder/
 └── resources/
@@ -34,7 +37,8 @@ altVServerFolder/
 ```
 
 **This is for YOUR resource that you want to implement the chat resource into.**
-resource.cfg
+
+`resource.cfg`
 ```
 type: js,
 main: your_resource_main.mjs
@@ -43,6 +47,14 @@ client-files: [],
 deps: [
     chat
 ]
+```
+
+### Configuration
+Inside chat/index.mjs:
+```
+let rangedChat = false; // Used for ranged chat.
+let rangeOfChat = 1200; // Used for ranged chat.
+let cancelAllChat = false; // Used to intercept messages.
 ```
 
 ### General Usage
