@@ -11,8 +11,10 @@ Features:
 * Chat Ranges (Must be enabled inside the index.mjs for chat.);
 * Chat Open / Close Events for Clientside
 * Chat Message Event for Clientside
+* Automatically Clear Chat Box on Close
 
 **Chat Range**
+
 ![](https://i.imgur.com/uu74ct0.png)
 
 **If you plan on using chat ranges please consider that [this is 100 range for two players](https://i.imgur.com/agmEMtY.jpg)**

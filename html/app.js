@@ -167,6 +167,7 @@ function closeChat() {
 		msgInputLine.blur();
 		msgInputBlock.style.display = 'none';
 		chatOpened = false;
+		msgInputLine.value = "";
 	} else {
 		return false;
 	}
