@@ -62,7 +62,7 @@ deps: [
 
 ### Configuration
 Inside chat/index.mjs:
-```
+```js
 let rangedChat = false; // Used for ranged chat.
 let rangeOfChat = 25; // Used for ranged chat.
 let cancelAllChat = false; // Used to intercept messages.
@@ -70,7 +70,7 @@ let cancelAllChat = false; // Used to intercept messages.
 
 ### General Usage
 **Serverside**
-```
+```js
 import * as alt from 'alt';
 import * as chat from 'chat';
 
@@ -117,7 +117,7 @@ chat.debug(`secret INFORMATION!`);
 ```
 
 **Clientside**
-```
+```js
 import * as alt from 'alt';
 import * as chat from 'chat';
 
