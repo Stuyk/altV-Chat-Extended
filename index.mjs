@@ -98,6 +98,27 @@ export function unmute(player) {
   mutedPlayers.set(player.name, false);
 }
 
+// Formatting for in-chat debug messages.
+export function success(message){
+  broadcast(`{00FF00}[Success] ${message}`)
+}
+
+export function info(message){
+  broadcast(`{FFAB0F}[Info] ${message}`)
+}
+
+export function warning(message){
+  broadcast(`{FF8989}[Warning] ${message}`)
+}
+
+export function error(message){
+  broadcast(`{FF0000}[Error] ${message}`)
+}
+
+export function debug(message){
+  broadcast(`{FF00FF}[Debug] ${message}`)
+}
+
 // Used in an onConnect function to add functions to the player entity for a seperate resource.
 export function setupPlayer(player) {
   player.sendMessage = (msg) => {
@@ -124,4 +145,4 @@ alt.on('broadcastMessage', (msg) => {
   send(null, msg);
 });
 
-export default { send, broadcast, registerCmd, setupPlayer };
+export default { send, broadcast, registerCmd, setupPlayer, success, info, warning, error, debug };
