@@ -33,7 +33,7 @@ You can start by adding the chat resource in its own folder called 'chat'.
 
 **Installation:**
 
-```js
+```yaml
 altVServerFolder/
 └── resources/
     ├── chat/
