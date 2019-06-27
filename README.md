@@ -33,7 +33,7 @@ You can start by adding the chat resource in its own folder called 'chat'.
 
 **Installation:**
 
-```
+```js
 altVServerFolder/
 └── resources/
     ├── chat/
@@ -50,7 +50,7 @@ altVServerFolder/
 **This is for YOUR resource that you want to implement the chat resource into.**
 
 `resource.cfg`
-```
+```yaml
 type: js,
 main: your_resource_main.mjs
 client-main: your_resource_client.mjs
