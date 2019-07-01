@@ -1,27 +1,29 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 function colorify(text)
 {
-  let matches = [];
-  let m = null;
-  let curPos = 0;
-  do {
-    m = /\{[A-Fa-f0-9]{3}\}|\{[A-Fa-f0-9]{6}\}/g.exec(text.substr(curPos));
-    if(!m)
-      break;
-    matches.push({
-      found: m[0],
-      index: m['index'] + curPos
-    });
-    curPos = curPos + m['index'] + m[0].length;
-  } while(m != null);
-  if (matches.length > 0) {
-    text += '</font>';
-    for(let i = matches.length - 1; i >= 0; --i) {
-      let color = matches[i].found.substring(1, matches[i].found.length - 1);
-      let insertHtml = (i != 0 ? '</font>' : '') + '<font color="#' + color + '">';
-      text = text.slice(0, matches[i].index) + insertHtml + text.slice(matches[i].index + matches[i].found.length, text.length);
-    }
-  }
-  return text;
+	let matches = [];
+	let m = null;
+	let curPos = 0;
+	do {
+		m = /\{[A-Fa-f0-9]{3}\}|\{[A-Fa-f0-9]{6}\}/g.exec(text.substr(curPos));
+		if(!m)
+			break;
+		matches.push({
+			found: m[0],
+			index: m['index'] + curPos
+		});
+		curPos = curPos + m['index'] + m[0].length;
+	} while(m != null);
+	if (matches.length > 0) {
+		text += '</font>';
+		for(let i = matches.length - 1; i >= 0; --i) {
+			let color = matches[i].found.substring(1, matches[i].found.length - 1);
+			let insertHtml = (i != 0 ? '</font>' : '') + '<font color="#' + color + '">';
+			text = text.slice(0, matches[i].index) + insertHtml + text.slice(matches[i].index + matches[i].found.length, text.length);
+		}
+	}
+	return text;
 }
 
 var chatOpened = false;
@@ -37,28 +39,28 @@ function fadeIn(el, time) {
 	el.style.opacity = 0;
 	el.style.display = 'block';
 
-  var last = +new Date();
-  var tick = function() {
-    el.style.opacity = (+new Date() - last) / time;
+	var last = +new Date();
+	var tick = function() {
+		el.style.opacity = (+new Date() - last) / time;
 
-    if (el.style.opacity < 1)
-      (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
-  };
+		if (el.style.opacity < 1)
+			(window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+	};
 
-  tick();
+	tick();
 }
 
 function fadeOut(el, time) {
-  el.style.opacity = 1;
+	el.style.opacity = 1;
 
-  var last = +new Date();
-  var tick = function() {
-    el.style.opacity = 1 - (new Date() - last) / time;
+	var last = +new Date();
+	var tick = function() {
+		el.style.opacity = 1 - (new Date() - last) / time;
 
-    if (+el.style.opacity > 0)
-      (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
-  };
-  tick();
+		if (+el.style.opacity > 0)
+			(window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+	};
+	tick();
 }
 
 function scrollTo(el, to, time) {
@@ -74,19 +76,19 @@ function scrollTo(el, to, time) {
 	var prevVal = el.scrollTop;
 
 	var last = +new Date();
-  var tick = function() {
+	var tick = function() {
 		el.scrollTop = (neg ? -el.scrollTop : el.scrollTop) + diff * ((new Date() - last) / time);
 		if(el.scrollTop == prevVal)
 			return;
 		prevVal = el.scrollTop;
-    last = +new Date();
+		last = +new Date();
 
-    if ((el.scrollTop < to && !neg) || (el.scrollTop > to && neg)) {
-      (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
-    }
-  };
+		if ((el.scrollTop < to && !neg) || (el.scrollTop > to && neg)) {
+			(window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+		}
+	};
 
-  tick();
+	tick();
 }
 
 function checkOverflow() {
@@ -165,7 +167,7 @@ function closeChat() {
 		msgInputLine.blur();
 		msgInputBlock.style.display = 'none';
 		chatOpened = false;
-		msgInputLine.value = "";
+		msgInputLine.value = '';
 	} else {
 		return false;
 	}
@@ -186,7 +188,7 @@ function highlightChat() {
 			document.querySelector('.chatbox').classList.remove('active');
 		chatHighlighted = false;
 	}, 4000);
-};
+}
 
 function hideChat(state) {
 	console.log('hideChat called');
@@ -204,9 +206,9 @@ document.querySelector('#message').addEventListener('submit', function(e) {
 
 
 document.querySelector('.msginput input').addEventListener('keydown', function(e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-  }
+	if (e.keyCode === 9) {
+		e.preventDefault();
+	}
 	else if (e.keyCode == 40) {
 		e.preventDefault();
 		if(currentBufferIndex > 0) {

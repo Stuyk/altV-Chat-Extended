@@ -2,7 +2,7 @@ import alt from 'alt';
 
 let cmdHandlers = {};
 let mutedPlayers = new Map();
-let rangedChat = true;
+let rangedChat = false;
 let rangeOfChat = 25;
 let cancelAllChat = false;
 
