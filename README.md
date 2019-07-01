@@ -4,6 +4,8 @@ Remember to 🌟 this Github if you 💖 it.
 
 You can start by adding the chat resource in its own folder called 'chat'.
 
+This chat resource builds on the EXISTING chat resource for alt:V.
+
 **Features:**
 
 * Register Commands
