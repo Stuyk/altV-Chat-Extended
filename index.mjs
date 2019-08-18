@@ -4,7 +4,7 @@ let cmdHandlers = {};
 let mutedPlayers = new Map();
 let rangedChat = false;
 let rangeOfChat = 25;
-let cancelAllChat = true;
+let cancelAllChat = false;
 
 function invokeCmd(player, cmd, args) {
     const callback = cmdHandlers[cmd];
